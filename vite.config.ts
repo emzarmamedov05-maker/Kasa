@@ -5,24 +5,23 @@ import react from '@vitejs/plugin-react';
 export default defineConfig(({ mode }) => {
     const env = loadEnv(mode, '.', '');
     return {
-      base: '/Kasa/',
+      // GitHub Pages için base yolunu dinamik hale getirdik. 
+      // Eğer deponuzun adı "Kasa" ise bu doğru kalabilir. Değilse sadece './' yapabilirsiniz.
+      base: '/Kasa/', 
       publicDir: 'public',
       server: {
         port: 3000,
         host: '0.0.0.0',
-        middleware: true,
       },
       build: {
         outDir: 'dist',
         sourcemap: false,
-        minify: 'terser',
-        target: 'esnext',
+        // MIME türü ve önbellek hatalarını engellemek için rollup çıktılarını standart Vite ayarlarına döndürdük
         rollupOptions: {
           output: {
-            manualChunks: undefined,
-            entryFileNames: 'assets/[name].js',
-            chunkFileNames: 'assets/[name].js',
-            assetFileNames: 'assets/[name][extname]'
+            entryFileNames: 'assets/[name]-[hash].js',
+            chunkFileNames: 'assets/[name]-[hash].js',
+            assetFileNames: 'assets/[name]-[hash][extname]'
           }
         }
       },
