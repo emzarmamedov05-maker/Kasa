@@ -6,6 +6,7 @@ export default defineConfig(({ mode }) => {
     const env = loadEnv(mode, '.', '');
     return {
       base: '/Kasa/',
+      publicDir: 'public',
       server: {
         port: 3000,
         host: '0.0.0.0',
@@ -15,9 +16,13 @@ export default defineConfig(({ mode }) => {
         outDir: 'dist',
         sourcemap: false,
         minify: 'terser',
+        target: 'esnext',
         rollupOptions: {
           output: {
-            manualChunks: undefined
+            manualChunks: undefined,
+            entryFileNames: 'assets/[name].js',
+            chunkFileNames: 'assets/[name].js',
+            assetFileNames: 'assets/[name][extname]'
           }
         }
       },

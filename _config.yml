@@ -1,0 +1,8 @@
+# GitHub Pages configuration to disable Jekyll processing
+markdown: kramdown
+highlighter: rouge
+exclude:
+  - node_modules
+  - npm-debug.log
+  - package-lock.json
+  - yarn.lock
