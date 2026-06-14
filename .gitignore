@@ -1,0 +1,13 @@
+# Dependencies
+node_modules
+
+# Production
+dist
+
+# Environment variables (Hassas Bilgiler)
+.env
+.env.local
+.env.*.local
+
+# IDE and System files
+.DS_Store
