@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { Income, PaymentMethod } from '../types.ts';
+import { Income, PaymentMethod } from '../types';
 
 interface Props {
   incomes: Income[];
@@ -116,4 +116,3 @@ const IncomeManager: React.FC<Props> = ({ incomes, onAddIncome, onDeleteIncome }
 };
 
 export default IncomeManager;
-

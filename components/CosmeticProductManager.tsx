@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { CosmeticTransaction, PaymentMethod } from '../types.ts';
+import { CosmeticTransaction, PaymentMethod } from '../types';
 
 interface Props {
   cosmetics: CosmeticTransaction[];
@@ -119,4 +119,3 @@ const CosmeticProductManager: React.FC<Props> = ({ cosmetics, onAddCosmetic, onD
 };
 
 export default CosmeticProductManager;
-

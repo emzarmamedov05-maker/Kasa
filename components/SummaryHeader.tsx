@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { AppState, PaymentMethod } from '../types.ts';
+import { AppState, PaymentMethod } from '../types';
 
 interface Props {
   state: AppState;
@@ -150,4 +150,3 @@ const StatCard: React.FC<{
 );
 
 export default SummaryHeader;
-

@@ -5,28 +5,14 @@ import react from '@vitejs/plugin-react';
 export default defineConfig(({ mode }) => {
     const env = loadEnv(mode, '.', '');
     return {
-      base: './',
-      publicDir: 'public',
       server: {
         port: 3000,
         host: '0.0.0.0',
       },
-      build: {
-        outDir: 'dist',
-        sourcemap: false,
-        // MIME türü ve önbellek hatalarını engellemek için rollup çıktılarını standart Vite ayarlarına döndürdük
-        rollupOptions: {
-          output: {
-            entryFileNames: 'assets/[name]-[hash].js',
-            chunkFileNames: 'assets/[name]-[hash].js',
-            assetFileNames: 'assets/[name]-[hash][extname]'
-          }
-        }
-      },
       plugins: [react()],
       define: {
-        'process.env.API_KEY': JSON.stringify(env.VITE_GEMINI_API_KEY),
-        'process.env.GEMINI_API_KEY': JSON.stringify(env.VITE_GEMINI_API_KEY)
+        'process.env.API_KEY': JSON.stringify(env.GEMINI_API_KEY),
+        'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY)
       },
       resolve: {
         alias: {

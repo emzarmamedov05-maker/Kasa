@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { Barber, PaymentMethod, TipRecipient, Transaction, CosmeticTransaction } from '../types.ts';
+import { Barber, PaymentMethod, TipRecipient, Transaction, CosmeticTransaction } from '../types';
 
 interface Props {
   barber: Barber;
@@ -250,4 +250,3 @@ const BarberCard: React.FC<Props> = ({ barber, onUpdateRate, onAddTransaction, o
 };
 
 export default BarberCard;
-

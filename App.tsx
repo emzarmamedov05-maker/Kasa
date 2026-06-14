@@ -1,14 +1,14 @@
 
 import React, { useState, useEffect, useCallback, useRef } from 'react';
-import { AppState, Barber, Transaction, CosmeticTransaction, Expense, Income, PaymentMethod, TipRecipient, DailyHistory } from './types.ts';
-import SummaryHeader from './components/SummaryHeader.tsx';
-import BarberGrid from './components/BarberGrid.tsx';
-import ExpenseManager from './components/ExpenseManager.tsx';
-import IncomeManager from './components/IncomeManager.tsx';
-import CosmeticProductManager from './components/CosmeticProductManager.tsx';
-import HistoryManager from './components/HistoryManager.tsx';
-import HistorySearch from './components/HistorySearch.tsx';
-import SyncPanel from './components/SyncPanel.tsx';
+import { AppState, Barber, Transaction, CosmeticTransaction, Expense, Income, PaymentMethod, TipRecipient, DailyHistory } from './types';
+import SummaryHeader from './components/SummaryHeader';
+import BarberGrid from './components/BarberGrid';
+import ExpenseManager from './components/ExpenseManager';
+import IncomeManager from './components/IncomeManager';
+import CosmeticProductManager from './components/CosmeticProductManager';
+import HistoryManager from './components/HistoryManager';
+import HistorySearch from './components/HistorySearch';
+import SyncPanel from './components/SyncPanel';
 
 const STORAGE_KEY = 'mens_space_v11_history';
 const SYNC_API_BASE = 'https://kvdb.io/A4xT8uXGfVbYc2p9zLqM1r'; 
@@ -378,12 +378,3 @@ const App: React.FC = () => {
 };
 
 export default App;
-
-
-
-
-
-
-
-
-

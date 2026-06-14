@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { Barber, PaymentMethod, TipRecipient } from '../types.ts';
-import BarberCard from './BarberCard.tsx';
+import { Barber, PaymentMethod, TipRecipient } from '../types';
+import BarberCard from './BarberCard';
 
 interface Props {
   barbers: Barber[];
@@ -93,5 +93,3 @@ const BarberGrid: React.FC<Props> = ({
 };
 
 export default BarberGrid;
-
-

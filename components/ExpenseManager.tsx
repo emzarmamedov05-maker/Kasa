@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { Expense, PaymentMethod } from '../types.ts';
+import { Expense, PaymentMethod } from '../types';
 
 interface Props {
   expenses: Expense[];
@@ -116,4 +116,3 @@ const ExpenseManager: React.FC<Props> = ({ expenses, onAddExpense, onDeleteExpen
 };
 
 export default ExpenseManager;
-

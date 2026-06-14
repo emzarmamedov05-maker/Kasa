@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { DailyHistory } from '../types.ts';
+import { DailyHistory } from '../types';
 
 interface Props {
   history: DailyHistory[];
@@ -80,4 +80,3 @@ const HistorySearch: React.FC<Props> = ({ history }) => {
 };
 
 export default HistorySearch;
-

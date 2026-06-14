@@ -1,54 +1,20 @@
 <div align="center">
-<h1 align="center">MENS SPACE - Dijital Muhasebe Sistemi</h1>
-<p align="center">Berber salonları için profesyonel gelir, gider ve komisyon takip uygulaması.</p>
+<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
 </div>
 
-## 🚀 Özellikler
-- **Berber Yönetimi:** 8 farklı berber için ayrı ayrı komisyon ve işlem takibi.
-- **Gelir/Gider Takibi:** Günlük masrafların ve ek gelirlerin yönetimi.
-- **Bulut Senkronizasyonu:** KVDB üzerinden cihazlar arası veri eşleştirme.
-- **Arşivleme:** Gün sonu raporları ve geçmiş işlem araması.
-- **Dinamik Hesaplama:** Bahşiş (Kasiyer/Berber) ve kozmetik satış yönetimi.
+# Run and deploy your AI Studio app
 
-## 🛠️ Kurulum
+This contains everything you need to run your app locally.
 
-1. Depoyu klonlayın:
-   `git clone [repo-url]`
-2. Bağımlılıkları yükleyin:
+View your app in AI Studio: https://ai.studio/apps/ef8fe960-1bdf-4513-ac76-fea92f76e9e7
+
+## Run Locally
+
+**Prerequisites:**  Node.js
+
+
+1. Install dependencies:
    `npm install`
-3. `.env.local` dosyası oluşturun ve API anahtarınızı ekleyin:
-   `VITE_GEMINI_API_KEY=your_api_key_here`
-4. Uygulamayı başlatın:
+2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
+3. Run the app:
    `npm run dev`
-
-> Not: `.env.local` dosyasını kesinlikle repo'ya koymayın. Bu dosya `.gitignore` içinde zaten hariç tutulmuştur.
-
-## 📦 Teknolojiler
-- React 19
-- Vite
-- TypeScript
-- Tailwind CSS
-- KVDB.io (Senkronizasyon için)
-
-## 🚀 GitHub Pages'de Yayınlama
-
-### Otomatik Yayınlama (GitHub Actions)
-1. Depoyu GitHub'a push edin
-2. GitHub Actions otomatik olarak `main` branch'ine her push'da:
-   - Projeyi build eder
-   - `dist` klasörünü GitHub Pages'de yayınlar
-   - Uygulamaya şu URL'den erişin: `https://emzarmamedov05-maker.github.io/Kasa/`
-
-### Manuel Yayınlama
-Eğer GitHub Actions kullanmak istemezseniz:
-```bash
-npm run deploy
-```
-
-⚠️ **Önemli:** GitHub Pages'i etkinleştirmek için:
-1. Repo Settings → Pages
-2. Source: `Deploy from a branch`
-3. Branch: `gh-pages` (otomatik oluşturulacak)
-
-## 📝 Lisans
-MIT
